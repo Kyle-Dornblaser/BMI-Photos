@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Reddit:</strong>
+  <%= @post.reddit_id %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @post.image_url %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @post.gender %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @post.age %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @post.height %>
+</p>
+
+<p>
+  <strong>Before weight:</strong>
+  <%= @post.before_weight %>
+</p>
+
+<p>
+  <strong>After weight:</strong>
+  <%= @post.after_weight %>
+</p>
+
+<p>
+  <strong>After bmi:</strong>
+  <%= @post.after_bmi %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

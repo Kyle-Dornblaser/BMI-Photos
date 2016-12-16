@@ -1,0 +1,57 @@
+<%= form_for(post) do |f| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :reddit_id %>
+    <%= f.text_field :reddit_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :height %>
+    <%= f.text_field :height %>
+  </div>
+
+  <div class="field">
+    <%= f.label :before_weight %>
+    <%= f.text_field :before_weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :after_weight %>
+    <%= f.text_field :after_weight %>
+  </div>
+
+  <div class="field">
+    <%= f.label :after_bmi %>
+    <%= f.text_field :after_bmi %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
